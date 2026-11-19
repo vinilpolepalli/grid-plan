@@ -1,0 +1,11 @@
+Project: "Grid Plan" - independent demo inspired by the problem space of Marengo (YC S26), AI-assisted data-center design. NOT affiliated; footer says so.
+
+Concept: a planning sandbox for a fictional AI data-center campus ("Demo Campus"):
+- Inputs panel: IT load target (MW slider 10-200), redundancy tier (N, N+1, 2N), cooling approach (air, direct-to-chip liquid, immersion), PUE assumption slider (1.1-1.6).
+- Computed outputs, all clearly labeled MODELED / ILLUSTRATIVE: total facility power (IT load x PUE), estimated rack count (assume 40kW/rack air, 120kW liquid, 250kW immersion - label as assumptions), rough whitespace area estimate, and utility feed requirement with tier multiplier.
+- A one-line caveat under every number: "modeled from the stated assumptions, not an engineering estimate."
+- A simple SVG schematic of the campus block layout that updates with rack count (rows of rack blocks, cooling plant, substation) - schematic only, labeled "not to scale".
+- An assumptions panel listing every constant used so nothing looks like hidden knowledge.
+Honesty bar: header badge "Modeled demo - sample assumptions"; copy states all numbers are illustrative planning math from visible assumptions, not engineering advice; footer: "Independent demo built by Vinil Polepalli. Not affiliated with or endorsed by Marengo."
+UI: dark sleek, distinct accent BLUE (#3b82f6 family - not indigo/violet/sky-cyan; clearly primary blue).
+Tech: Next.js static export (output:'export'), npm run build must pass, no runtime external calls. Write SPEC.md first, then slices. No git commit, no deploy.

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-ground text-ink font-sans antialiased; font-variant-numeric: tabular-nums; }
+  :focus-visible { outline: 2px solid #b91c1c; outline-offset: 2px; }
+}
+@layer components {
+  .card { @apply rounded-card border border-hair bg-white; }
+  .label { @apply text-[11px] font-semibold text-ink-faint; font-variant-caps: all-small-caps; letter-spacing: 0.08em; font-size: 13px; }
+  .btn { @apply rounded-btn bg-signal px-4 py-2 text-sm font-medium text-white hover:bg-signal-hover disabled:opacity-50; }
+  .btn-ghost { @apply rounded-btn border border-hair bg-white px-3 py-1.5 text-sm text-ink hover:border-ink-faint; }
+  .field { @apply w-full rounded-field border border-hair bg-white px-3 py-2 text-sm font-mono; }
+  .chip { /* unslop-ignore pill: status badge (sample vs modeled), not an interactive button */ @apply rounded-full border border-hair px-2 py-0.5 text-[11px] font-medium text-ink-soft; }
+  .chip-modeled { @apply rounded-full border border-signal/40 px-2 py-0.5 text-[11px] font-semibold text-signal; }
+  .sv-frame { fill: #fff; stroke: #e4e4e7; }
+  .sv-sub { fill: #fef2f2; stroke: #b91c1c; }
+  .sv-cool { fill: #f4f4f5; stroke: #71717a; }
+  .sv-rack { fill: #d4d4d8; stroke: #71717a; stroke-width: 0.5; }
+  .sv-line { fill: none; stroke: #71717a; stroke-width: 1.5; }
+  .sv-t { fill: #18181b; font-size: 13px; font-weight: 600; font-family: system-ui, sans-serif; }
+  .sv-s { fill: #52525b; font-size: 11px; font-family: system-ui, sans-serif; }
+  .sv-warn { fill: #b91c1c; font-weight: 600; letter-spacing: 0.06em; }
+  .sv-wide { @apply hidden w-full md:block; }
+  .sv-tall { @apply mx-auto block w-full max-w-[420px] md:hidden; }
+}
